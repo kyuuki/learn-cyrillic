@@ -1,14 +1,12 @@
 package jp.kyuuki.learn.cyrillic;
 
-import jp.kyuuki.learn.cyrillic.R.id;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
 
@@ -16,26 +14,15 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
-        adapter.add("„@");
-        adapter.add("„A");
-        adapter.add("„B");
-        adapter.add("„C");
 
-        ListView listView = (ListView) findViewById(id.listView);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                    int position, long id) {
-                ListView listView = (ListView) parent;
-                String item = (String) listView.getItemAtPosition(position);
-                Toast.makeText(MainActivity.this, item, Toast.LENGTH_SHORT).show();
+        Button button = (Button) findViewById(R.id.button1);
+        button.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CharacterListActivity.class);
+                MainActivity.this.startActivity(intent);
             }
         });
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
