@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">LearnCyrillic</string>
+    <string name="app_name">Learn Cyrillic</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="lets_learn_cyrillic">キリル文字を覚えましょう！</string>
+    <string name="list_character">文字リスト</string>
 
 </resources>
