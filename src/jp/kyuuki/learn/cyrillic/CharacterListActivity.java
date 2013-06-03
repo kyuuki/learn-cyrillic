@@ -18,23 +18,23 @@ public class CharacterListActivity extends Activity {
         setContentView(R.layout.activity_character_list);
         
 //        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
-//        adapter.add("Ñ@");
-//        adapter.add("ÑA");
-//        adapter.add("ÑB");
-//        adapter.add("ÑC");
+//        adapter.add("–ê");
+//        adapter.add("–ë");
+//        adapter.add("–í");
+//        adapter.add("–ì");
         CyrillicCharacterArrayAdapter adapter = new CyrillicCharacterArrayAdapter(this, R.layout.row_cyrillic);
-        adapter.add(new CyrillicCharacter("Ñ@", 1, 1));
-        adapter.add(new CyrillicCharacter("ÑA", 3, -1));
-        adapter.add(new CyrillicCharacter("ÑB", 2, 2));
-        adapter.add(new CyrillicCharacter("ÑC", 3, -1));
+        adapter.add(new CyrillicCharacter("–ê", 1, 1));
+        adapter.add(new CyrillicCharacter("–ë", 3, -1));
+        adapter.add(new CyrillicCharacter("–í", 2, 2));
+        adapter.add(new CyrillicCharacter("–ì", 3, -1));
 
-        adapter.add(new CyrillicCharacter("ÑD", 3, -1));
-        adapter.add(new CyrillicCharacter("ÑE", 3, -1));
-        adapter.add(new CyrillicCharacter("ÑG", 3, -1));
-        adapter.add(new CyrillicCharacter("ÑN", 2, 1));
-        adapter.add(new CyrillicCharacter("ÑO", 1, 1));
-        adapter.add(new CyrillicCharacter("ÑS", 1, 1));
-        adapter.add(new CyrillicCharacter("Ñ`", 3, 1));
+        adapter.add(new CyrillicCharacter("–î", 3, -1));
+        adapter.add(new CyrillicCharacter("–ï", 3, -1));
+        adapter.add(new CyrillicCharacter("–ñ", 3, -1));
+        adapter.add(new CyrillicCharacter("–ù", 2, 1));
+        adapter.add(new CyrillicCharacter("–û", 1, 1));
+        adapter.add(new CyrillicCharacter("–¢", 1, 1));
+        adapter.add(new CyrillicCharacter("–Ø", 3, 1));
         
         ListView listView = (ListView) findViewById(id.listView);
         listView.setAdapter(adapter);

@@ -2,8 +2,8 @@ package jp.kyuuki.learn.cyrillic.model;
 
 public class CyrillicCharacter {
     private String character;
-    private int level;  // “ïˆÕ“x 1: ‰pŒê‚Æ‚Ù‚Ú“¯‚¶, 2: ‰pŒê‚Æˆá‚¤‚Ì‚Å’ˆÓ, 3: ‚â‚â“ï‚µ‚¢, 4: ‚©‚È‚è“ï‚µ‚¢
-    private int lesson;  // ƒAƒ“ƒR[ƒ‹ ‚Ü‚¢‚É‚¿ƒƒVƒAŒê ƒJƒ^ƒcƒ€ƒŠ‚Ì‰‹‰•Ò‚Ì‰Û
+    private int level;   // é›£æ˜“åº¦ 1: è‹±èªã¨ã»ã¼åŒã˜, 2: è‹±èªã¨é•ã†ã®ã§æ³¨æ„, 3: ã‚„ã‚„é›£ã—ã„, 4: ã‹ãªã‚Šé›£ã—ã„
+    private int lesson;  // ã‚¢ãƒ³ã‚³ãƒ¼ãƒ« ã¾ã„ã«ã¡ãƒ­ã‚·ã‚¢èª ã‚«ã‚¿ãƒ„ãƒ ãƒªã®åˆç´šç·¨ã®èª²
     private String comment;
 
     public CyrillicCharacter(String character, int level, int lesson) {
@@ -31,5 +31,4 @@ public class CyrillicCharacter {
     public int getLesson() {
         return lesson;
     }
-
 }
