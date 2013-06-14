@@ -16,7 +16,7 @@ public class CharacterListActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_list);
-        
+
 //        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
 //        adapter.add("А");
 //        adapter.add("Б");
@@ -24,16 +24,43 @@ public class CharacterListActivity extends Activity {
 //        adapter.add("Г");
         CyrillicCharacterArrayAdapter adapter = new CyrillicCharacterArrayAdapter(this, R.layout.row_cyrillic);
         adapter.add(new CyrillicCharacter("А", 1, 1));
-        adapter.add(new CyrillicCharacter("Б", 3, -1));
+        adapter.add(new CyrillicCharacter("Б", 3, 6));
         adapter.add(new CyrillicCharacter("В", 2, 2));
-        adapter.add(new CyrillicCharacter("Г", 3, -1));
-
-        adapter.add(new CyrillicCharacter("Д", 3, -1));
-        adapter.add(new CyrillicCharacter("Е", 3, -1));
-        adapter.add(new CyrillicCharacter("Ж", 3, -1));
+        adapter.add(new CyrillicCharacter("Г", 3, 9));
+        adapter.add(new CyrillicCharacter("Д", 3, 2));
+        
+        adapter.add(new CyrillicCharacter("Е", 2, 3));
+        adapter.add(new CyrillicCharacter("Ё", 3, 12));
+        adapter.add(new CyrillicCharacter("Ж", 3, 7));
+        adapter.add(new CyrillicCharacter("З", 3, 4));
+        adapter.add(new CyrillicCharacter("И", 3, 4));
+        
+        adapter.add(new CyrillicCharacter("Й", 4, 5));
+        adapter.add(new CyrillicCharacter("К", 2, 3));
+        adapter.add(new CyrillicCharacter("Л", 3, 7));
+        adapter.add(new CyrillicCharacter("М", 2, 7));
         adapter.add(new CyrillicCharacter("Н", 2, 1));
+        
         adapter.add(new CyrillicCharacter("О", 1, 1));
-        adapter.add(new CyrillicCharacter("Т", 1, 1));
+        adapter.add(new CyrillicCharacter("П", 3, 6));
+        adapter.add(new CyrillicCharacter("Р", 4, 4));
+        adapter.add(new CyrillicCharacter("С", 2, 3));
+        adapter.add(new CyrillicCharacter("Т", 2, 1));
+        
+        adapter.add(new CyrillicCharacter("У", 3, 3));
+        adapter.add(new CyrillicCharacter("Ф", 3, 6));
+        adapter.add(new CyrillicCharacter("Х", 2, 8));
+        adapter.add(new CyrillicCharacter("Ц", 3, 11));
+        adapter.add(new CyrillicCharacter("Ч", 3, 4));
+        
+        adapter.add(new CyrillicCharacter("Ш", 3, 10));
+        adapter.add(new CyrillicCharacter("Щ", 3, 14));
+        adapter.add(new CyrillicCharacter("Ъ", 3, 15));
+        adapter.add(new CyrillicCharacter("Ы", 4, 2));
+        adapter.add(new CyrillicCharacter("Ь", 3, 8));
+        
+        adapter.add(new CyrillicCharacter("Э", 3, 11));
+        adapter.add(new CyrillicCharacter("Ю", 3, 13));
         adapter.add(new CyrillicCharacter("Я", 3, 1));
         
         ListView listView = (ListView) findViewById(id.listView);

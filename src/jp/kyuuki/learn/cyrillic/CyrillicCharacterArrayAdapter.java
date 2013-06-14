@@ -30,7 +30,10 @@ public class CyrillicCharacterArrayAdapter extends ArrayAdapter<CyrillicCharacte
         TextView text2 = (TextView) view.findViewById(R.id.textView2);
         
         text1.setText(cyrillicCharacter.getCharacter());
-        text2.setText("Lesson " + cyrillicCharacter.getLesson());
+        int lesson = cyrillicCharacter.getLesson();
+        if (lesson > 0) {
+            text2.setText("Lesson " + cyrillicCharacter.getLesson());
+        }
 
         return view;
     }
