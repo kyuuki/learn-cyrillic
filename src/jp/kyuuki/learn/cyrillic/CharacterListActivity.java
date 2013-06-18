@@ -39,13 +39,13 @@ public class CharacterListActivity extends Activity {
         adapter.add(new CyrillicCharacter("К", 2, 3));
         adapter.add(new CyrillicCharacter("Л", 3, 7));
         adapter.add(new CyrillicCharacter("М", 2, 7));
-        adapter.add(new CyrillicCharacter("Н", 2, 1));
+        adapter.add(new CyrillicCharacter("Н", 2, 1, true));
         
         adapter.add(new CyrillicCharacter("О", 1, 1));
         adapter.add(new CyrillicCharacter("П", 3, 6));
         adapter.add(new CyrillicCharacter("Р", 4, 4));
         adapter.add(new CyrillicCharacter("С", 2, 3));
-        adapter.add(new CyrillicCharacter("Т", 2, 1));
+        adapter.add(new CyrillicCharacter("Т", 1, 1, true));
         
         adapter.add(new CyrillicCharacter("У", 3, 3));
         adapter.add(new CyrillicCharacter("Ф", 3, 6));
@@ -65,10 +65,11 @@ public class CharacterListActivity extends Activity {
         
         ListView listView = (ListView) findViewById(id.listView);
         listView.setAdapter(adapter);
+        
+        // Controller
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                    int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ListView listView = (ListView) parent;
                 CyrillicCharacter cyrillicCharacter = (CyrillicCharacter) listView.getItemAtPosition(position);
                 Toast.makeText(CharacterListActivity.this, cyrillicCharacter.getCharacter(), Toast.LENGTH_SHORT).show();
@@ -81,5 +82,5 @@ public class CharacterListActivity extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
-    }    
+    }
 }
