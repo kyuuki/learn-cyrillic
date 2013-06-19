@@ -25,7 +25,7 @@ public class CharacterListActivity extends Activity {
         CyrillicCharacterArrayAdapter adapter = new CyrillicCharacterArrayAdapter(this, R.layout.row_cyrillic);
         adapter.add(new CyrillicCharacter("А", 1, 1));
         adapter.add(new CyrillicCharacter("Б", 3, 6));
-        adapter.add(new CyrillicCharacter("В", 2, 2));
+        adapter.add(new CyrillicCharacter("В", 2, 2, true));
         adapter.add(new CyrillicCharacter("Г", 3, 9));
         adapter.add(new CyrillicCharacter("Д", 3, 2));
         

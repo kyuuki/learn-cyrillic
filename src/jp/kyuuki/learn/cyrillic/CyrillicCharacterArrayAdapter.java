@@ -2,6 +2,7 @@ package jp.kyuuki.learn.cyrillic;
 
 import jp.kyuuki.learn.cyrillic.model.CyrillicCharacter;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -29,7 +30,7 @@ public class CyrillicCharacterArrayAdapter extends ArrayAdapter<CyrillicCharacte
         
         TextView text1 = (TextView) view.findViewById(R.id.textView1);
         TextView text2 = (TextView) view.findViewById(R.id.textView2);
-        TextView AttentionSmalltext = (TextView) view.findViewById(R.id.attentionSmallTextView);
+        TextView attentionSmalltext = (TextView) view.findViewById(R.id.attentionSmallTextView);
         
         // View
         text1.setText(cyrillicCharacter.getCharacter());
@@ -38,7 +39,9 @@ public class CyrillicCharacterArrayAdapter extends ArrayAdapter<CyrillicCharacte
             text2.setText("Lesson " + cyrillicCharacter.getLesson());
         }
         if (cyrillicCharacter.isNeedsAttentionForSmall()) {
-            AttentionSmalltext.setText("!");
+            attentionSmalltext.setText("!");
+        } else {
+            attentionSmalltext.setText("");
         }
 
         // Controller
