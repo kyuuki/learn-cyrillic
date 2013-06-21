@@ -1,8 +1,11 @@
 package jp.kyuuki.learn.cyrillic.model;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
-public class CyrillicCharacter {
+public class CyrillicCharacter implements Serializable {
+    private static final long serialVersionUID = -7033295995285933399L;
+
     private String character;
     private int level;   // 難易度 1: 英語とほぼ同じ, 2: 英語と違うので注意, 3: やや難しい, 4: かなり難しい
     private int lesson;  // アンコール まいにちロシア語 カタツムリの初級編の課
@@ -26,23 +29,18 @@ public class CyrillicCharacter {
     public String getComment() {
         return comment;
     }
-
     public void setComment(String comment) {
         this.comment = comment;
     }
-
     public String getCharacter() {
         return character;
     }
-
     public int getLevel() {
         return level;
     }
-
     public int getLesson() {
         return lesson;
     }
-
     public boolean isNeedsAttentionForSmall() {
         return needsAttentionForSmall;
     }

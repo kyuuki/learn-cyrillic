@@ -4,6 +4,7 @@ import jp.kyuuki.learn.cyrillic.R.id;
 import jp.kyuuki.learn.cyrillic.model.CyrillicCharacter;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -36,7 +37,7 @@ public class CharacterListActivity extends Activity {
         adapter.add(new CyrillicCharacter("И", 3, 4));
         
         adapter.add(new CyrillicCharacter("Й", 4, 5));
-        adapter.add(new CyrillicCharacter("К", 2, 3));
+        adapter.add(new CyrillicCharacter("К", 2, 3, true));
         adapter.add(new CyrillicCharacter("Л", 3, 7));
         adapter.add(new CyrillicCharacter("М", 2, 7));
         adapter.add(new CyrillicCharacter("Н", 2, 1, true));
@@ -72,7 +73,10 @@ public class CharacterListActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ListView listView = (ListView) parent;
                 CyrillicCharacter cyrillicCharacter = (CyrillicCharacter) listView.getItemAtPosition(position);
-                Toast.makeText(CharacterListActivity.this, cyrillicCharacter.getCharacter(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(CharacterListActivity.this, cyrillicCharacter.getCharacter(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(CharacterListActivity.this, CharacterActivity.class);
+                intent.putExtra("character", cyrillicCharacter);
+                CharacterListActivity.this.startActivity(intent);
             }
         });
     }

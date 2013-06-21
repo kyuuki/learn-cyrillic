@@ -28,7 +28,7 @@ public class CyrillicCharacterArrayAdapter extends ArrayAdapter<CyrillicCharacte
         
         CyrillicCharacter cyrillicCharacter = getItem(position);
         
-        TextView text1 = (TextView) view.findViewById(R.id.textView1);
+        TextView text1 = (TextView) view.findViewById(R.id.characterText);
         TextView text2 = (TextView) view.findViewById(R.id.textView2);
         TextView attentionSmalltext = (TextView) view.findViewById(R.id.attentionSmallTextView);
         
